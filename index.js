@@ -5,6 +5,8 @@ var homepage = require('./routes/homepage');
 var login = require('./routes/login');
 var userprofile = require('./routes/userprofile');
 var bodyparser = require('body-parser');
+var info = require('./routes/info');
+var db = require('./routes/db');
 
 
 app.use(bodyparser.urlencoded({
@@ -21,3 +23,4 @@ app.listen(app.get('port'), function(){
 app.use('/login', login);
 app.use('/', homepage);
 app.use('/userprofile', userprofile);
+app.use('/info', info);

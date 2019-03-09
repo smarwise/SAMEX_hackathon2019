@@ -3,6 +3,7 @@ var app = express();
 
 app.get('/', function(req, res){
 res.render('userprofile', {
+    name: "User"
     
 });
 });
