@@ -3,6 +3,7 @@ var handlebars = require('express-handlebars').create({defaultLayout:'main'});
 var app = express();
 var homepage = require('./routes/homepage');
 var login = require('./routes/login');
+var userprofile = require('./routes/userprofile');
 
 
 app.engine('handlebars', handlebars.engine);
@@ -15,4 +16,5 @@ app.listen(app.get('port'), function(){
 
 
 app.use('/login', login);
-app.use('/homepage', homepage);
+app.use('/', homepage);
+app.use('/userprofile', userprofile);
