@@ -4,8 +4,11 @@ var app = express();
 var homepage = require('./routes/homepage');
 var login = require('./routes/login');
 var userprofile = require('./routes/userprofile');
+var bodyparser = require('body-parser');
 
 
+app.use(bodyparser.urlencoded({
+    extended: true}));
 app.engine('handlebars', handlebars.engine);
 app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'handlebars');
