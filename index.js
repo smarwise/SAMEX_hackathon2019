@@ -10,6 +10,7 @@ var info = require('./routes/info');
 var db = require('./routes/db');
 var session = require('express-session');
 var activities = require('./routes/activities');
+var events = require('./routes/events');
 
 app.use(bodyparser.urlencoded({
     extended: true}));
@@ -28,3 +29,4 @@ app.use('/userprofile', userprofile);
 app.use('/info', info);
 app.use('/signup', signup);
 app.use('/activities', activities);
+app.use('/events', events);

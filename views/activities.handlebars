@@ -1,12 +1,27 @@
 <h1> Skill based activities  </h1>
+<br>
+<h4> Actitivites that you can do that will grow your skills based on your chosen skill interests </h4>
 
 <br>
 <hr>
 <hr>
 
-<h2> {{activities.Communication}}</h2>
-<br>
-<h2>{{activities.Responsibility}}</h2>
-<br>
-<h2>{{activities.Criticalt}}</h2>
+
+<form action = "events" method = "POST">
+    <input type = "hidden" name = "communication" value = "communiction">
+    <button type="submit" class="btn btn-light"><h2> {{activities.Communication}}</h2></button>
+</form>
+
+
+<form action = "events" method = "POST">
+    <input type = "hidden" name = "responsibility "value = "responsibilty">
+    <button type="submit" class="btn btn-light"><h2>{{activities.Responsibility}}</h2></button>
+</form>
+
+
+<form action = "events" method = "POST">
+    <input type = "hidden" name = "criticalt" value = "criticalt">
+    <button type="submit" class="btn btn-light"><h2>{{activities.Criticalt}}</h2></button>
+</form>
+
 
