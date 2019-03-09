@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-
+var db = require('./db');
 
 
 app.get('/', function(req, res){
@@ -11,19 +11,28 @@ app.get('/', function(req, res){
 });
 
 app.post('/', function(req, res){
-bio = console.log(req.body.bio);
-job = console.log(req.body.job);
-passions = console.log(req.body.passions);
-hobbies = console.log(req.body.hobbies);
-skills = console.log(req.body.skills);
-Communication = console.log(req.body.Communication);
-Delegation = console.log(req.body.Delegation);
-Responsibility = console.log(req.body.Responsibility);
-Relationshipb = console.log(req.body.Relationshipb);
-Conflictman = console.log(req.body.Conflictman);
-Criticalt = console.log(req.body.Criticalt);
-Creativity = console.log(req.body.Creativity);
-Negotiating = console.log(req.body.Negotiating);
+var bio = req.body.bio;
+job = req.body.job;
+passions = req.body.passions;
+hobbies = req.body.hobbies;
+skills = req.body.skills;
+Communication = req.body.Communication;
+
+Delegation = req.body.Delegation;
+
+Responsibility = req.body.Responsibility;
+
+Relationshipb = req.body.Relationshipb;
+
+Conflictman = req.body.Conflictman;
+
+Criticalt = req.body.Criticalt;
+
+Creativity = req.body.Creativity;
+
+Negotiating = req.body.Negotiating;
+
+db.query("INSERT INTO `user` (bio, username, passions, hobby, proffesion, skills, communication, criticalt, responsibility) VALUES ('"+bio+"', 'sam38', '"+passions+"', '"+hobbies+"','"+job+"', '"+skills+"', '"+Communication+"', '"+Criticalt+"', '"+Responsibility+"')");
 
 
 

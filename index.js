@@ -3,11 +3,13 @@ var handlebars = require('express-handlebars').create({defaultLayout:'main'});
 var app = express();
 var homepage = require('./routes/homepage');
 var login = require('./routes/login');
+var signup = require('./routes/signup');
 var userprofile = require('./routes/userprofile');
 var bodyparser = require('body-parser');
 var info = require('./routes/info');
 var db = require('./routes/db');
-
+var session = require('express-session');
+var activities = require('./routes/activities');
 
 app.use(bodyparser.urlencoded({
     extended: true}));
@@ -24,3 +26,5 @@ app.use('/login', login);
 app.use('/', homepage);
 app.use('/userprofile', userprofile);
 app.use('/info', info);
+app.use('/signup', signup);
+app.use('/activities', activities);

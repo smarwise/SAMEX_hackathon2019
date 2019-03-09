@@ -6,7 +6,7 @@ app = express();
 const options = {
   host: 'localhost',
   user: 'root',
-  password: '',
+  password: '123456',
   database: 'girlcode'
 }
 
