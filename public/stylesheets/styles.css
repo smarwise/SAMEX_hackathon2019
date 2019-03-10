@@ -1,0 +1,11 @@
+#bg-image {
+	background-image: url("three-vertical-halftone-banner-different-colors_1017-17363.jpg");
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	z-index: -99;
+	/* Preserve aspet ratio */
+	min-width: 100%;
+	min-height: 100%;
+}

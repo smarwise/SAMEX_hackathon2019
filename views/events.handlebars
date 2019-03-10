@@ -1,10 +1,16 @@
 <h1> Events that can improve your {{event.skill}} skills</h1>
 
+<br>
+<br>
+<hr>
+<hr>
 
-{{event.activity}}
-
-
-<button type="button" class="btn btn-secondary">Join</button>
 {{#each event}}
-{{this.activity}}
+<h3>{{this.activity}} </h3>
+<h4>{{this.bio}}</h4> 
+<form action = "attendance" method = "post">
+     <img src = "getty_615072736_357887.jpg" width = "150px" >
+<input type = "hidden" name = "attendance" value = "{{this.activity}}">
+<button type="submit" class="btn btn-secondary">Join</button>
+</form>
 {{/each}}

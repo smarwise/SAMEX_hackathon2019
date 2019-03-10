@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var db = require('./db');
+var db = require("./db");
 var session = require('express-session');
 
 app.use(session({
@@ -12,17 +12,16 @@ app.use(session({
 app.get('/', function(req, res){
     db.query("SELECT * FROM `user` WHERE username = '"+sesh.user+"'", function(request, responce){
         if (responce[0] != undefined){
-                            
-        res.render('activities', {
-            activities : responce[0],
-            stuff: "stuff"
-        });
+            console.log(responce[0]);
         }
-    
-    }); 
+        res.render('mentor', {
+            skills:responce[0]
+     
+         });
+    });
+
+
 });
-
-
 
 
 module.exports = app;

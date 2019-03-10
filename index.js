@@ -11,7 +11,15 @@ var db = require('./routes/db');
 var session = require('express-session');
 var activities = require('./routes/activities');
 var events = require('./routes/events');
+var attendance = require('./routes/attendance');
+var mentor = require('./routes/mentor');
+var progress = require('./routes/progress');
+var mentorlist = require('./routes/mentorlist');
+var profile = require('./routes/profile');
 
+
+
+app.use(express.static(__dirname + '/public'));
 app.use(bodyparser.urlencoded({
     extended: true}));
 app.engine('handlebars', handlebars.engine);
@@ -30,3 +38,8 @@ app.use('/info', info);
 app.use('/signup', signup);
 app.use('/activities', activities);
 app.use('/events', events);
+app.use('/attendance', attendance);
+app.use('/mentor', mentor);
+app.use('/progress', progress);
+app.use('/mentorlist', mentorlist);
+app.use('/profile', profile);

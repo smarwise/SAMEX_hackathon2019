@@ -10,8 +10,6 @@ app.use(session({
 }));
 
 app.get('/', function(req, res){
-     sesh = req.session;
-    sesh.user = "user";
     db.query("SELECT * FROM `user` WHERE username = '"+sesh.user+"'", function(request, responce){
         if (responce[0] != undefined){
             skills = [];

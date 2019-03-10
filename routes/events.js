@@ -33,7 +33,7 @@ db.query("SELECT * FROM `activities` WHERE skill = '"+skill+"'", function(reques
         console.log(responce[0]);
     }
     res.render('events', {
-        event: responce[0]
+        event: responce
     });
 });
 

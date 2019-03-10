@@ -1,0 +1,15 @@
+<h1> These people have the skills you are interested in: </h1>
+
+<br>
+<br>
+<hr>
+<hr>
+
+{{#each mentor}}
+<h3>{{this.username}} </h3>
+<img src = "{{this.path}}" width = "150px"> 
+<form action = "profile" method = "post">
+<input type = "hidden" name = "user" value = "{{this.username}}">
+<button type="submit" class="btn btn-secondary">View Profile</button>
+</form>
+{{/each}}
